@@ -3,11 +3,11 @@
   user:
     name: '{{ user_name }}'
     shell: /bin/bash
-    groups: {{ user_groups }}
+    groups: '{{ user_groups }}'
 
 - name: Set authorized key
   authorized_key:
     user: '{{ user_name }}'
     key: '{{ item }}'
     state: present
-  loop: {{ user_authorized_keys }}
+  loop: '{{ user_authorized_keys }}'
