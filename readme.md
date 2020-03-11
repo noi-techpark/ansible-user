@@ -26,6 +26,7 @@ User creation role.
 ## Password
 
 To create a password hash for a user, the following command must be extecuted:
+
 ```
 mkpasswd --method=SHA-512
 ```
