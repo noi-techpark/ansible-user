@@ -2,6 +2,7 @@
 - name: Create user
   user:
     name: '{{ user_name }}'
+    password: '{{ user_password }}'
     shell: /bin/bash
     groups: '{{ user_groups }}'
 
@@ -11,3 +12,4 @@
     key: '{{ item }}'
     state: present
   loop: '{{ user_authorized_keys }}'
+
