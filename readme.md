@@ -12,16 +12,18 @@ User creation role.
 
 ## Example Playbook
 
-    - hosts: all
-      roles:
-        - role: ansible-user
-          vars:
-            user_name: alex
-            user_password: sha512-hashed-password
-            user_groups:
-              - docker
-            user_authorized_keys:
-              - {{ lookup('file', 'path-to-key') }}
+```yaml
+- hosts: all
+  roles:
+    - role: ansible-user
+      vars:
+        user_name: alex
+        user_password: sha512-hashed-password
+        user_groups:
+          - docker
+        user_authorized_keys:
+          - {{ lookup('file', 'path-to-key') }}
+```
 
 ## Password
 
